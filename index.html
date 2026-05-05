@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Freedom Blueprint — Interactive Course</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="From corporate salary to independent income in 12 months. Interactive course with calculators, planners, and tools.">
+</head>
+<body>
+<div class="app">
+
+<!-- MOBILE HEADER -->
+<div class="mobile-header">
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <span class="mobile-title">Freedom Blueprint</span>
+</div>
+<div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-header">
+    <h1>The Freedom Blueprint</h1>
+    <p>Interactive Course</p>
+  </div>
+  <div class="sidebar-progress">
+    <div class="progress-bar-bg"><div class="progress-bar-fill"></div></div>
+    <div class="progress-text">0 of 22 completed · 0%</div>
+  </div>
+  <div class="nav-parts">
+    <div class="nav-item" data-chapter="intro"><span class="nav-check"></span> Welcome &amp; Overview</div>
+
+    <div class="nav-part-label">Part One — The Math</div>
+    <div class="nav-item" data-chapter="ch1"><span class="nav-check"></span> 1. The Real Number</div>
+    <div class="nav-item" data-chapter="ch2"><span class="nav-check"></span> 2. The Velocity Equation</div>
+    <div class="nav-item" data-chapter="ch3"><span class="nav-check"></span> 3. The Buffer Architecture</div>
+    <div class="nav-item" data-chapter="ch4"><span class="nav-check"></span> 4. The Compensation Autopsy</div>
+
+    <div class="nav-part-label">Part Two — Build</div>
+    <div class="nav-item" data-chapter="ch5"><span class="nav-check"></span> 5. Product Decision Matrix</div>
+    <div class="nav-item" data-chapter="ch6"><span class="nav-check"></span> 6. The 7-Day Sprint</div>
+    <div class="nav-item" data-chapter="ch7"><span class="nav-check"></span> 7. The Invisible Brand</div>
+    <div class="nav-item" data-chapter="ch8"><span class="nav-check"></span> 8. The Launch Machine</div>
+    <div class="nav-item" data-chapter="ch9"><span class="nav-check"></span> 9. The Revenue Stack</div>
+    <div class="nav-item" data-chapter="casestudy"><span class="nav-check"></span> Case Study: Sarah</div>
+
+    <div class="nav-part-label">Part Three — Protect</div>
+    <div class="nav-item" data-chapter="ch10"><span class="nav-check"></span> 10. The Contract Audit</div>
+    <div class="nav-item" data-chapter="ch11"><span class="nav-check"></span> 11. The Tax Transition</div>
+    <div class="nav-item" data-chapter="ch12"><span class="nav-check"></span> 12. Fear Engineering</div>
+
+    <div class="nav-part-label">Part Four — Exit</div>
+    <div class="nav-item" data-chapter="ch13"><span class="nav-check"></span> 13. The Five Signals</div>
+    <div class="nav-item" data-chapter="ch14"><span class="nav-check"></span> 14. 8-Week Transition</div>
+    <div class="nav-item" data-chapter="ch15"><span class="nav-check"></span> 15. Freedom Shock</div>
+
+    <div class="nav-part-label">Part Five — Multiply</div>
+    <div class="nav-item" data-chapter="ch16"><span class="nav-check"></span> 16. AI Operations</div>
+    <div class="nav-item" data-chapter="ch17"><span class="nav-check"></span> 17. Relationship Playbook</div>
+    <div class="nav-item" data-chapter="ch18"><span class="nav-check"></span> 18. Identity Reconstruction</div>
+    <div class="nav-item" data-chapter="ch19"><span class="nav-check"></span> 19. Scaling Protocols</div>
+    <div class="nav-item" data-chapter="ch20"><span class="nav-check"></span> 20. 365-Day Retrospective</div>
+
+    <div style="padding:16px 24px;border-top:1px solid rgba(255,255,255,0.08);margin-top:12px">
+      <button onclick="resetProgress()" style="background:none;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.4);padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12px;width:100%">Reset All Progress</button>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ═══════════════ INTRO ═══════════════ -->
+<div class="chapter active" id="intro">
+  <div class="chapter-label">Welcome</div>
+  <h2>The Freedom Blueprint</h2>
+  <p class="chapter-subtitle">From corporate salary to independent income in 12 months. No fluff. No hype. Just the engineering.</p>
+
+  <p>This is not a passive reading experience. It is a working course. Each chapter builds on the last, and every chapter ends with exercises that are the real product — everything else is context.</p>
+
+  <div class="phase-bar">
+    <div class="phase-segment"><strong>Phase 1</strong>Foundation<br>Months 1–3</div>
+    <div class="phase-segment"><strong>Phase 2</strong>Build &amp; Validate<br>Months 4–6</div>
+    <div class="phase-segment"><strong>Phase 3</strong>Launch &amp; Protect<br>Months 7–9</div>
+    <div class="phase-segment"><strong>Phase 4</strong>Exit &amp; Transition<br>Months 10–12</div>
+  </div>
+
+  <h3>What You Will Need</h3>
+  <p>A notebook or digital document. Your last three months of bank statements (Chapter 1). Your employment contract (Chapter 10). Approximately 60–90 minutes per chapter.</p>
+
+  <h3>What You Will Have When You Finish</h3>
+  <p>A calculated Freedom Number, a validated product idea, a 7-day sprint plan, a 90-day launch system, a revenue stack, a 6-month financial buffer target, five measurable quit signals, an 8-week transition protocol, a post-resignation schedule, an AI toolkit, scripts for difficult conversations, and a 365-day retrospective system.</p>
+
+  <div class="callout key">
+    <div class="callout-title">⚡ How This Works</div>
+    <p>Your progress is saved automatically in your browser. Complete exercises, fill in calculators, and check off tasks — it all persists between sessions. Start at Chapter 1. Start today.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <div></div>
+    <button class="nav-btn next" onclick="markComplete('intro')">Start Chapter 1 →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER 1 ═══════════════ -->
+<div class="chapter" id="ch1">
+  <div class="chapter-label">Chapter 1</div>
+  <h2>The Real Number</h2>
+  <p class="chapter-subtitle">Why your freedom costs less than you think — and the three-tier system that makes the math undeniable.</p>
+
+  <p>Every corporate employee carries a phantom number in their head. In almost every case, that number is dramatically inflated — not by 10 or 20 percent, but by multiples. The inflation happens because most people confuse their gross salary with the income they actually need.</p>
+
+  <h3>The Three-Tier Freedom Model</h3>
+  <table class="styled-table">
+    <thead><tr><th>Tier</th><th>Definition</th><th>Typical Range</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Survival</strong></td><td>Housing, food, utilities, insurance, debt</td><td>40–55% of gross</td><td>Bills covered. Nothing extra.</td></tr>
+      <tr><td><strong>Comfort</strong></td><td>Survival + healthcare + modest lifestyle + savings</td><td>55–70% of gross</td><td>Life runs. Not anxious.</td></tr>
+      <tr><td><strong>Freedom</strong></td><td>Comfort + growth + opportunity + full lifestyle</td><td>70–85% of gross</td><td>You would not take a job for more money.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout key">
+    <div class="callout-title">💡 Key Insight</div>
+    <p>Your target is NOT your gross salary. It is your Freedom Number — typically 30–45% lower than what your employer pays before deductions consume their share.</p>
+  </div>
+
+  <h3>The Salary Deconstruction</h3>
+  <p>Take a gross salary of $5,000/month. Watch what actually happens to that money:</p>
+  <table class="styled-table">
+    <thead><tr><th>Category</th><th>Monthly</th><th>% of Gross</th></tr></thead>
+    <tbody>
+      <tr><td>Gross Salary</td><td>$5,000</td><td>100%</td></tr>
+      <tr><td>Income Tax (~25%)</td><td>−$1,250</td><td>25%</td></tr>
+      <tr><td>Health Insurance</td><td>−$350</td><td>7%</td></tr>
+      <tr><td>Commute &amp; Parking</td><td>−$280</td><td>5.6%</td></tr>
+      <tr><td>Work Wardrobe</td><td>−$120</td><td>2.4%</td></tr>
+      <tr><td>Lunches &amp; Coffee</td><td>−$200</td><td>4%</td></tr>
+      <tr><td>Stress &amp; Convenience Spending</td><td>−$300</td><td>6%</td></tr>
+      <tr style="background:var(--gold-pale)"><td><strong>What You Actually Keep</strong></td><td><strong>$2,500</strong></td><td><strong>50%</strong></td></tr>
+    </tbody>
+  </table>
+  <p>The pattern is consistent: approximately half of your gross salary is consumed before you freely spend a dollar.</p>
+
+  <!-- FREEDOM NUMBER CALCULATOR -->
+  <div class="tool-card">
+    <div class="tool-header"><span class="tool-icon">🧮</span><h4>Freedom Number Calculator</h4></div>
+    <div class="tool-body">
+      <p style="font-size:14px;color:var(--text-light);margin-bottom:16px">Enter your actual monthly expenses from bank statements — not estimates.</p>
+
+      <div class="input-row">
+        <div class="input-group"><label>Housing (rent/mortgage)</label><input type="number" id="fn_housing" data-save="fn_housing" placeholder="$" oninput="calcFreedomNumber()"></div>
+        <div class="input-group"><label>Food &amp; Groceries</label><input type="number" id="fn_food" data-save="fn_food" placeholder="$" oninput="calcFreedomNumber()"></div>
+      </div>
+      <div class="input-row">
+        <div class="input-group"><label>Transport (non-commute)</label><input type="number" id="fn_transport" data-save="fn_transport" placeholder="$" oninput="calcFreedomNumber()"></div>
+        <div class="input-group"><label>Utilities, Internet, Phone</label><input type="number" id="fn_utilities" data-save="fn_utilities" placeholder="$" oninput="calcFreedomNumber()"></div>
+      </div>
+      <div class="input-row">
+        <div class="input-group"><label>Health Insurance (private)</label><input type="number" id="fn_insurance" data-save="fn_insurance" placeholder="$" oninput="calcFreedomNumber()"></div>
+        <div class="input-group"><label>Debt Payments</label><input type="number" id="fn_debt" data-save="fn_debt" placeholder="$" oninput="calcFreedomNumber()"></div>
+      </div>
+      <div class="input-row">
+        <div class="input-group"><label>Subscriptions</label><input type="number" id="fn_subs" data-save="fn_subs" placeholder="$" oninput="calcFreedomNumber()"></div>
+        <div class="input-group"><label>Personal &amp; Leisure</label><input type="number" id="fn_personal" data-save="fn_personal" placeholder="$" oninput="calcFreedomNumber()"></div>
+      </div>
+      <div class="input-group"><label>Children / Dependents</label><input type="number" id="fn_dependents" data-save="fn_dependents" placeholder="$" oninput="calcFreedomNumber()"></div>
+
+      <div class="result-card">
+        <div class="result-label">Your Freedom Number</div>
+        <div class="result-value" id="fn_result_main">$0</div>
+        <div class="result-grid">
+          <div class="result-mini"><div class="result-label">Survival</div><div class="result-value" id="fn_result_survival">$0</div></div>
+          <div class="result-mini"><div class="result-label">Comfort</div><div class="result-value" id="fn_result_comfort">$0</div></div>
+          <div class="result-mini"><div class="result-label">Freedom</div><div class="result-value" id="fn_result_freedom">$0</div></div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:28px">The Fear Tax</h3>
+      <p style="font-size:14px;color:var(--text-light)">How much do you spend monthly on coping mechanisms that exist because work makes you miserable? (Friday dinners, retail therapy, weekend escapes, etc.)</p>
+      <div class="input-row" style="margin-top:12px">
+        <div class="input-group"><label>Monthly Fear Tax</label><input type="number" id="fn_feartax" data-save="fn_feartax" placeholder="$" oninput="calcFreedomNumber()"></div>
+        <div class="input-group"><label>Current Side Income</label><input type="number" id="fn_sideincome" data-save="fn_sideincome" placeholder="$" oninput="calcFreedomNumber()"></div>
+      </div>
+      <div class="result-card" style="margin-top:12px">
+        <div class="result-grid" style="grid-template-columns:1fr 1fr 1fr;margin:0">
+          <div class="result-mini"><div class="result-label">Adjusted Target</div><div class="result-value" id="fn_adjusted">$0</div></div>
+          <div class="result-mini"><div class="result-label">Your Gap</div><div class="result-value" id="fn_gap">$0</div></div>
+          <div class="result-mini"><div class="result-label">Per Day</div><div class="result-value" id="fn_daily">$0/day</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exercise-box">
+    <h4>📝 Chapter 1 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Pull your last 3 months of bank statements. Calculate average real monthly spending.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Complete the Freedom Number Calculator above with actual figures.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Calculate your Fear Tax: identify spending that exists primarily because of job stress.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Compute your gap: Freedom Number minus current non-employment income.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write your statement:</label></div>
+    <textarea data-save="ch1_statement" placeholder="I need $___/month. That is $___/day. That is ___ sales of a $___ product." style="width:100%;min-height:60px;border:1px solid var(--border);border-radius:6px;padding:10px;font-family:inherit;margin-top:8px"></textarea>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('intro')">← Welcome</button>
+    <button class="nav-btn complete" onclick="markComplete('ch1')">Complete &amp; Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER 2 ═══════════════ -->
+<div class="chapter" id="ch2">
+  <div class="chapter-label">Chapter 2</div>
+  <h2>The Velocity Equation</h2>
+  <p class="chapter-subtitle">Time is not your bottleneck. Energy is. Here is how to find the hours when your brain actually produces.</p>
+
+  <p>Forty-five minutes at 6:00 AM before your employer has borrowed your prefrontal cortex produces fundamentally different output than 45 minutes at 9:30 PM after eight hours of meetings. The first session might produce 800 words. The second might produce 150 words you delete the next morning.</p>
+
+  <blockquote>Most corporate employees are trying to build a business with their employer's leftover energy. That is like trying to run a marathon on the calories your lunch didn't need.</blockquote>
+
+  <h3>The Energy Audit</h3>
+  <table class="styled-table">
+    <thead><tr><th>Time Window</th><th>Cognitive State</th><th>Best For</th><th>Project Value</th></tr></thead>
+    <tbody>
+      <tr><td>5:00–7:00 AM</td><td>Peak (70% of people)</td><td>Deep creative work, writing</td><td><strong style="color:var(--green)">HIGHEST</strong></td></tr>
+      <tr><td>7:00–9:00 AM</td><td>High but declining</td><td>Problem-solving, editing</td><td><strong>HIGH</strong></td></tr>
+      <tr><td>12:00–1:00 PM</td><td>Variable; post-lunch dip</td><td>Admin, emails, light content</td><td>MEDIUM</td></tr>
+      <tr><td>5:00–7:00 PM</td><td>Depleted for most</td><td>Exercise, planning</td><td style="color:var(--text-light)">LOW</td></tr>
+      <tr><td>8:00–10:00 PM</td><td>Lowest capacity</td><td>Rest, passive consumption</td><td style="color:var(--red)">VERY LOW</td></tr>
+      <tr><td>Weekend AM</td><td>Peak (fully rested)</td><td>Long sessions (2–3 hrs)</td><td><strong style="color:var(--green)">HIGHEST</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>The 5-to-9 Weekly Architecture</h3>
+  <p>This schedule produces 8–12 focused hours per week without heroics:</p>
+  <table class="styled-table">
+    <thead><tr><th>Day</th><th>Time</th><th>Activity</th><th>Minutes</th></tr></thead>
+    <tbody>
+      <tr><td>Monday</td><td>5:30–7:00 AM</td><td>Deep Work: product creation</td><td>90</td></tr>
+      <tr><td>Tuesday</td><td>5:30–7:00 AM</td><td>Deep Work: writing or building</td><td>90</td></tr>
+      <tr><td>Wednesday</td><td>12:00–1:00 PM</td><td>Light Work: admin, emails</td><td>50</td></tr>
+      <tr><td>Thursday</td><td>5:30–7:00 AM</td><td>Deep Work: marketing or refinement</td><td>90</td></tr>
+      <tr><td>Friday</td><td>12:00–12:30 PM</td><td>Weekly Review: shipped vs. stalled</td><td>30</td></tr>
+      <tr><td>Saturday</td><td>AM</td><td>NO SCREENS until 1 PM — recovery</td><td>0</td></tr>
+      <tr><td>Sunday</td><td>2:00–4:30 PM</td><td>Content batching + week prep</td><td>150</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warning">
+    <div class="callout-title">⚠️ The No-Screen Saturday Rule</div>
+    <p>Saturday morning is your biological reset. No phone, no laptop. Working seven days gives diminishing output. Resting one morning gives six days of full capacity plus compounding creative returns.</p>
+  </div>
+
+  <div class="callout tip">
+    <div class="callout-title">🌙 The Pre-Load Protocol</div>
+    <p>The night before every session: open the exact file you will work on, write one sentence describing what you will do next, set out your coffee supplies, place your phone in another room. Zero decisions between alarm and productive work.</p>
+  </div>
+
+  <div class="exercise-box">
+    <h4>📝 Chapter 2 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify your chronotype: morning-peak (70%) or afternoon-peak?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Choose your primary deep work strategy from the table above.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Build your personal 5-to-9 schedule and enter it as recurring calendar appointments.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Complete the Pre-Load Protocol tonight for your first session tomorrow.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>After one week, compare output from peak-state vs. previous evening sessions.</label></div>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('ch1')">← Chapter 1</button>
+    <button class="nav-btn complete" onclick="markComplete('ch2')">Complete &amp; Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER 3 ═══════════════ -->
+<div class="chapter" id="ch3">
+  <div class="chapter-label">Chapter 3</div>
+  <h2>The Buffer Architecture</h2>
+  <p class="chapter-subtitle">Engineering the financial cushion that makes quitting calculated — not reckless.</p>
+
+  <blockquote>Quitting without a safety net is not brave. It is expensive. The goal is to make quitting boring — so well-prepared it barely feels risky.</blockquote>
+
+  <p>The single biggest predictor of a successful transition is whether you built a financial buffer before resigning. Without one, every bad week is a crisis. With one, every bad week is a data point.</p>
+
+  <h3>Why Six Months Is the Minimum</h3>
+  <table class="styled-table">
+    <thead><tr><th>Scenario</th><th>Savings</th><th>Spend/Mo</th><th>Runway</th><th>Safe?</th></tr></thead>
+    <tbody>
+      <tr><td>No buffer</td><td>$0</td><td>$2,500</td><td>0 months</td><td style="color:var(--red)"><strong>NO</strong></td></tr>
+      <tr><td>Minimal</td><td>$5,000</td><td>$2,500</td><td>2 months</td><td style="color:var(--red)"><strong>NO</strong></td></tr>
+      <tr><td>Cautious</td><td>$10,000</td><td>$2,500</td><td>4 months</td><td style="color:var(--gold)">RISKY</td></tr>
+      <tr><td>Recommended</td><td>$15,000</td><td>$2,500</td><td>6 months</td><td style="color:var(--green)"><strong>YES ✓</strong></td></tr>
+      <tr><td>Conservative</td><td>$30,000</td><td>$2,500</td><td>12 months</td><td style="color:var(--green)"><strong>IDEAL ✓</strong></td></tr>
+    </tbody>
+  </table>
+
+  <!-- BUFFER CALCULATOR -->
+  <div class="tool-card">
+    <div class="tool-header"><span class="tool-icon">🏦</span><h4>Buffer Architecture Planner</h4></div>
+    <div class="tool-body">
+      <div class="input-row">
+        <div class="input-group"><label>Freedom Number ($/mo)</label><input type="number" id="buf_fn" data-save="buf_fn" placeholder="From Ch.1" oninput="calcBuffer()"></div>
+        <div class="input-group"><label>Buffer Months</label>
+          <select id="buf_months" data-save="buf_months" onchange="calcBuffer()">
+            <option value="3">3 months (risky)</option>
+            <option value="6" selected>6 months (recommended)</option>
+            <option value="9">9 months (comfortable)</option>
+            <option value="12">12 months (ideal)</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="input-group"><label>Current Savings Available</label><input type="number" id="buf_current" data-save="buf_current" placeholder="$" oninput="calcBuffer()"></div>
+        <div class="input-group"><label>Monthly Savings Rate</label><input type="number" id="buf_monthly" data-save="buf_monthly" placeholder="$/month" oninput="calcBuffer()"></div>
+      </div>
+      <div class="result-card">
+        <div class="result-grid" style="grid-template-columns:1fr 1fr;margin:0">
+          <div class="result-mini"><div class="result-label">Target Buffer</div><div class="result-value" id="buf_target">$0</div></div>
+          <div class="result-mini"><div class="result-label">Still Needed</div><div class="result-value" id="buf_remaining">$0</div></div>
+        </div>
+        <div class="result-grid" style="grid-template-columns:1fr 1fr;margin-top:12px">
+          <div class="result-mini"><div class="result-label">Time to Buffer</div><div class="result-value" id="buf_timeline">—</div></div>
+          <div class="result-mini"><div class="result-label">Buffer Funded By</div><div class="result-value" id="buf_date" style="font-size:18px">—</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Savings Acceleration Tactics</h3>
+  <table class="styled-table">
+    <thead><tr><th>Tactic</th><th>Gain/Mo</th><th>Effort</th><th>How to Start</th></tr></thead>
+    <tbody>
+      <tr><td>Cut one subscription tier</td><td>+$50–150</td><td>Low</td><td>Audit bank statements</td></tr>
+      <tr><td>Pack lunch 4x/week</td><td>+$120–200</td><td>Low</td><td>Prepare the night before</td></tr>
+      <tr><td>Sell unused items</td><td>+$100–500</td><td>Low</td><td>One marketplace session/month</td></tr>
+      <tr><td>Redirect next raise/bonus</td><td>+$200–1K</td><td>Zero</td><td>Auto-transfer before lifestyle inflation</td></tr>
+      <tr><td>Reduce dining out by 50%</td><td>+$150–300</td><td>Low</td><td>Track for one week first</td></tr>
+      <tr><td>Freelance one skill/month</td><td>+$200–500</td><td>Medium</td><td>One project via your network</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exercise-box">
+    <h4>📝 Chapter 3 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Calculate your 6-month buffer target using the planner above.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Check current savings available for an Exit Fund.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Open a separate savings account this week. Name it "Freedom Fund." Set up auto-transfer.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Choose two Savings Acceleration tactics from the table.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Set your target date:</label></div>
+    <textarea data-save="ch3_target" placeholder="At $___/month savings, I reach my buffer by: ________"></textarea>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('ch2')">← Chapter 2</button>
+    <button class="nav-btn complete" onclick="markComplete('ch3')">Complete &amp; Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER 4 ═══════════════ -->
+<div class="chapter" id="ch4">
+  <div class="chapter-label">Chapter 4</div>
+  <h2>The Compensation Autopsy</h2>
+  <p class="chapter-subtitle">What your employer is actually paying you — once you strip away the illusions, the deferred promises, and the golden handcuffs.</p>
+
+  <blockquote>The golden handcuffs only work if you never do the math. Once you calculate what staying costs in years of your life, and what leaving costs in unvested money, the decision becomes arithmetic.</blockquote>
+
+  <!-- COMPENSATION CALCULATOR -->
+  <div class="tool-card">
+    <div class="tool-header"><span class="tool-icon">⚖️</span><h4>Opportunity Cost Calculator</h4></div>
+    <div class="tool-body">
+      <p style="font-size:14px;color:var(--text-light);margin-bottom:16px">Enter your deferred compensation items to see the real cost of staying vs. leaving.</p>
+
+      <div class="comp-row" style="margin-bottom:12px">
+        <div class="input-row">
+          <div class="input-group"><label>Item (e.g., Annual Bonus)</label><input placeholder="Annual Bonus" style="font-size:14px"></div>
+          <div class="input-group"><label>Gross Value ($)</label><input type="number" class="comp-gross" placeholder="$" oninput="calcCompensation()"></div>
+        </div>
+        <div class="input-row" style="margin-top:4px">
+          <div class="input-group"><label>Tax Rate (%)</label><input type="number" class="comp-tax" value="30" oninput="calcCompensation()"></div>
+          <div class="input-group"><label>After-Tax Value</label><div class="comp-net" style="padding:10px;background:var(--cream);border-radius:6px;font-weight:600">$0</div></div>
+        </div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid var(--border);margin:20px 0">
+      <div style="font-weight:600;margin-bottom:8px">Total deferred compensation at risk: <span id="comp_total" style="color:var(--gold)">$0</span></div>
+
+      <h3 style="margin-top:24px">vs. Growth Opportunity</h3>
+      <div class="input-row">
+        <div class="input-group"><label>Expected Monthly Business Growth ($)</label><input type="number" id="comp_growth" placeholder="$/month" oninput="calcCompensation()"></div>
+        <div class="input-group"><label>Months You'd Wait</label><input type="number" id="comp_wait" value="6" oninput="calcCompensation()"></div>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Foregone Growth</div>
+        <div class="result-value" id="comp_opp" style="font-size:32px">$0</div>
+        <div class="result-note" id="comp_verdict">Enter values to see the verdict</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>The Insurance Bridge</h3>
+  <p>For employees in countries without universal healthcare, losing employer-sponsored insurance is the most emotionally charged element:</p>
+  <table class="styled-table">
+    <thead><tr><th>Option</th><th>Typical Cost</th><th>Best For</th></tr></thead>
+    <tbody>
+      <tr><td>Spouse/Partner Plan</td><td>$0–$300/month</td><td>Anyone with a partnered household</td></tr>
+      <tr><td>ACA Marketplace (US)</td><td>$150–$600/month</td><td>Self-employed; income drop creates subsidies</td></tr>
+      <tr><td>COBRA Continuation</td><td>$500–$1,800/month</td><td>Ongoing treatment or specific provider needs</td></tr>
+      <tr><td>Short-Term Plan</td><td>$100–$300/month</td><td>Bridge gap; limited pre-existing coverage</td></tr>
+    </tbody>
+  </table>
+  <p>If you are outside the US, universal healthcare typically eliminates this concern. Budget $300–$600/month as a line item in your Freedom Number if applicable.</p>
+
+  <div class="exercise-box">
+    <h4>📝 Chapter 4 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>List every deferred compensation item with gross value, tax rate, and vest date.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify your optimal resignation window — the date after largest items vest.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Calculate your Insurance Bridge cost: monthly insurance post-exit.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Run the Opportunity Cost Calculation above for your largest deferred item.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write your decision:</label></div>
+    <textarea data-save="ch4_decision" placeholder="Based on this analysis, I will / will not wait for [item]. Revised target date: _____"></textarea>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('ch3')">← Chapter 3</button>
+    <button class="nav-btn complete" onclick="markComplete('ch4')">Complete &amp; Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER 5 ═══════════════ -->
+<div class="chapter" id="ch5">
+  <div class="chapter-label">Chapter 5</div>
+  <h2>The Product Decision Matrix</h2>
+  <p class="chapter-subtitle">How to identify the exact product to build — using a system, not a guess.</p>
+
+  <blockquote>The best product to sell is the one you can build in under 30 days, sell with confidence, and improve with real feedback. Not the one that sounds most impressive at a dinner party.</blockquote>
+
+  <h3>The Skill Extraction</h3>
+  <div class="callout tip">
+    <div class="callout-title">💡 Five Rapid-Fire Questions</div>
+    <p>1. What do colleagues regularly ask you to help with?<br>
+    2. What frustrates you about how others handle your specialty?<br>
+    3. What could you teach in 2 hours that would save someone months?<br>
+    4. What have you spent 10,000+ hours doing almost unconsciously?<br>
+    5. What would the version of you from 5 years ago pay to learn?</p>
+  </div>
+
+  <h3>The Format Matrix</h3>
+  <table class="styled-table">
+    <thead><tr><th>Skill Type</th><th>Hrs/Wk</th><th>First Product</th><th>Price</th><th>Build Time</th></tr></thead>
+    <tbody>
+      <tr><td>Teaching / Coaching</td><td>5–8</td><td>PDF guide (20–50 pages)</td><td>$19–$47</td><td>2–4 weeks</td></tr>
+      <tr><td>Teaching / Coaching</td><td>8–15</td><td>Short video course (4–8 lessons)</td><td>$47–$97</td><td>4–6 weeks</td></tr>
+      <tr><td>Technical / Analytical</td><td>5–8</td><td>Spreadsheet tool or calculator</td><td>$27–$67</td><td>1–3 weeks</td></tr>
+      <tr><td>Technical / Analytical</td><td>8–15</td><td>SOP pack or process templates</td><td>$37–$97</td><td>3–5 weeks</td></tr>
+      <tr><td>Creative / Design</td><td>5–8</td><td>Template pack (Canva/Notion)</td><td>$19–$47</td><td>1–2 weeks</td></tr>
+      <tr><td>Writer / Communicator</td><td>5–8</td><td>Swipe file or prompt library</td><td>$19–$37</td><td>1–2 weeks</td></tr>
+      <tr><td>Any type</td><td>15+</td><td>Full course + community</td><td>$97–$297</td><td>6–10 wks</td></tr>
+    </tbody>
+  </table>
+
+  <!-- VALIDATION SCORECARD -->
+  <div class="tool-card">
+    <div class="tool-header"><span class="tool-icon">✅</span><h4>Validation Scorecard</h4></div>
+    <div class="tool-body">
+      <p style="font-size:14px;color:var(--text-light);margin-bottom:16px">Rate your product idea from 1 (weak) to 5 (strong) on each dimension.</p>
+
+      <div class="score-row">
+        <div class="score-question">Can I name 10 people with this problem?</div>
+        <div class="score-buttons">
+          <button class="score-btn" data-value="1">1</button>
+          <button class="score-btn" data-value="2">2</button>
+          <button class="score-btn" data-value="3">3</button>
+          <button class="score-btn" data-value="4">4</button>
+          <button class="score-btn" data-value="5">5</button>
+        </div>
+      </div>
+      <div class="score-row">
+        <div class="score-question">Have I personally experienced this problem?</div>
+        <div class="score-buttons">
+          <button class="score-btn" data-value="1">1</button>
+          <button class="score-btn" data-value="2">2</button>
+          <button class="score-btn" data-value="3">3</button>
+          <button class="score-btn" data-value="4">4</button>
+          <button class="score-btn" data-value="5">5</button>
+        </div>
+      </div>
+      <div class="score-row">
+        <div class="score-question">Are people already paying for solutions?</div>
+        <div class="score-buttons">
+          <button class="score-btn" data-value="1">1</button>
+          <button class="score-btn" data-value="2">2</button>
+          <button class="score-btn" data-value="3">3</button>
+          <button class="score-btn" data-value="4">4</button>
+          <button class="score-btn" data-value="5">5</button>
+        </div>
+      </div>
+      <div class="score-row">
+        <div class="score-question">Can I explain the solution in 5 minutes?</div>
+        <div class="score-buttons">
+          <button class="score-btn" data-value="1">1</button>
+          <button class="score-btn" data-value="2">2</button>
+          <button class="score-btn" data-value="3">3</button>
+          <button class="score-btn" data-value="4">4</button>
+          <button class="score-btn" data-value="5">5</button>
+        </div>
+      </div>
+      <div class="score-row">
+        <div class="score-question">Can I build this in under 30 days?</div>
+        <div class="score-buttons">
+          <button class="score-btn" data-value="1">1</button>
+          <button class="score-btn" data-value="2">2</button>
+          <button class="score-btn" data-value="3">3</button>
+          <button class="score-btn" data-value="4">4</button>
+          <button class="score-btn" data-value="5">5</button>
+        </div>
+      </div>
+
+      <div class="score-total">
+        <div class="big"><span id="score_total">0</span><span style="font-size:20px;color:var(--text-light)">/25</span></div>
+        <div id="score_verdict" class="score-verdict">Rate each question</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="exercise-box">
+    <h4>📝 Chapter 5 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify your skill type from the Format Matrix.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Choose your recommended first product format based on actual available hours.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Run your top idea through the Validation Scorecard above.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write your product statement:</label></div>
+    <textarea data-save="ch5_product" placeholder="I am creating a [FORMAT] that helps [AUDIENCE] solve [PROBLEM] for $[PRICE]."></textarea>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('ch4')">← Chapter 4</button>
+    <button class="nav-btn complete" onclick="markComplete('ch5')">Complete &amp; Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER 6 ═══════════════ -->
+<div class="chapter" id="ch6">
+  <div class="chapter-label">Chapter 6</div>
+  <h2>The 7-Day Product Sprint</h2>
+  <p class="chapter-subtitle">Build your first sellable product in one week, not one quarter.</p>
+
+  <div class="callout tip">
+    <div class="callout-title">📦 The 80% Rule</div>
+    <p>Your Day 7 product will not be perfect. It will be 80% of the ideal version. Ship it. Version 1.0 proves demand. Version 2.0 delivers excellence.</p>
+  </div>
+
+  <h3>Your Sprint Tracker</h3>
+  <p>Click each day to mark it complete:</p>
+  <div class="sprint-grid">
+    <div class="sprint-card" data-day="1" onclick="toggleSprint(1)"><div class="sprint-day">1</div><div class="sprint-focus">Architecture</div><div class="sprint-task">Table of contents + bullet points</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">90 min</div></div>
+    <div class="sprint-card" data-day="2" onclick="toggleSprint(2)"><div class="sprint-day">2</div><div class="sprint-focus">Core Content</div><div class="sprint-task">First half drafted (AI-assisted)</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">2–3 hrs</div></div>
+    <div class="sprint-card" data-day="3" onclick="toggleSprint(3)"><div class="sprint-day">3</div><div class="sprint-focus">Core Content</div><div class="sprint-task">Second half + exercises</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">2–3 hrs</div></div>
+    <div class="sprint-card" data-day="4" onclick="toggleSprint(4)"><div class="sprint-day">4</div><div class="sprint-focus">Editing</div><div class="sprint-task">Tighten, add examples, cut fluff</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">2 hrs</div></div>
+    <div class="sprint-card" data-day="5" onclick="toggleSprint(5)"><div class="sprint-day">5</div><div class="sprint-focus">Design</div><div class="sprint-task">Cover (Canva) + formatting + PDF</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">90 min</div></div>
+    <div class="sprint-card" data-day="6" onclick="toggleSprint(6)"><div class="sprint-day">6</div><div class="sprint-focus">Sales Setup</div><div class="sprint-task">Gumroad + sales page + pricing</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">90 min</div></div>
+    <div class="sprint-card" data-day="7" onclick="toggleSprint(7)"><div class="sprint-day">7</div><div class="sprint-focus">Soft Launch</div><div class="sprint-task">Send to 10 people. Collect feedback.</div><div style="font-size:12px;color:var(--text-light);margin-top:4px">60 min</div></div>
+  </div>
+
+  <div class="exercise-box">
+    <h4>📝 Chapter 6 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Block 7 consecutive days in your calendar. Label each day with its Sprint focus.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Complete Day 1 today: write your complete table of contents with bullet points.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Set a hard shipping deadline:</label></div>
+    <textarea data-save="ch6_deadline" placeholder="My product goes live on [DATE]. No extensions."></textarea>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('ch5')">← Chapter 5</button>
+    <button class="nav-btn complete" onclick="markComplete('ch6')">Complete &amp; Continue →</button>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTERS 7-20 (CONDENSED) ═══════════════ -->
+<!-- Each chapter follows the same pattern: content + exercise box -->
+
+<div class="chapter" id="ch7">
+  <div class="chapter-label">Chapter 7</div>
+  <h2>The Invisible Brand</h2>
+  <p class="chapter-subtitle">Building authority on LinkedIn without your employer knowing what you are building.</p>
+  <h3>Privacy Lockdown Checklist</h3>
+  <p>Do these first — 10 minutes total:</p>
+  <div class="tool-card"><div class="tool-header"><span class="tool-icon">🔒</span><h4>LinkedIn Privacy Lockdown</h4></div><div class="tool-body">
+    <div class="checklist-item"><input type="checkbox"> <label><strong>Share profile updates:</strong> Settings → Visibility → OFF (prevents headline edit notifications)</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label><strong>Who sees connections:</strong> Settings → Visibility → Only you (hides entrepreneur network)</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label><strong>Profile viewing:</strong> Settings → Visibility → Private mode (research invisibly)</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label><strong>Activity broadcasts:</strong> Settings → Visibility → Review &amp; restrict</label></div>
+  </div></div>
+
+  <h3>The 6-Month Transition Sequence</h3>
+  <div class="timeline">
+    <div class="timeline-item"><h5>Months 1–2: Invisible</h5><p>Privacy locked. Comment on 5–10 industry leaders' posts daily. Build algorithm recognition without publishing.</p></div>
+    <div class="timeline-item"><h5>Month 3: Quiet Authority</h5><p>Begin posting 2x/week. Industry insights only. Zero product mentions.</p></div>
+    <div class="timeline-item"><h5>Months 4–5: Problem-Focused</h5><p>Write about the specific problem your product solves — without mentioning the product.</p></div>
+    <div class="timeline-item"><h5>Month 6: Soft Launch</h5><p>"I have been putting together a resource on this. Comment below for early access." The audience is warm.</p></div>
+  </div>
+
+  <h3>The Five Post Types That Build Authority</h3>
+  <table class="styled-table">
+    <thead><tr><th>Type</th><th>Format</th><th>Example Hook</th></tr></thead>
+    <tbody>
+      <tr><td>Contrarian Take</td><td>1–3 paragraphs</td><td>"Every productivity book tells you X. Here is why that is wrong."</td></tr>
+      <tr><td>Framework</td><td>Numbered list</td><td>"The 3-part system I use for [outcome] — nobody talks about this."</td></tr>
+      <tr><td>Behind-the-Scenes</td><td>Story + lesson</td><td>"I made $0 in month 1 and $1,100 in month 3. What changed."</td></tr>
+      <tr><td>Myth-Busting</td><td>Before/After</td><td>"Most people think [belief]. I spent 3 years learning it is backwards."</td></tr>
+      <tr><td>Tool Share</td><td>List + tips</td><td>"5 tools I use daily that most [profession] have never heard of."</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exercise-box"><h4>📝 Chapter 7 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Complete the Privacy Lockdown above.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify 5–10 industry voices to follow and comment on.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write your under-the-radar LinkedIn headline.</label></div>
+    <textarea data-save="ch7_headline" placeholder="[Your Title] | Writing about [industry problem] for [audience]"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch6')">← Chapter 6</button><button class="nav-btn complete" onclick="markComplete('ch7')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch8">
+  <div class="chapter-label">Chapter 8</div><h2>The Launch Machine</h2>
+  <p class="chapter-subtitle">A 90-day revenue system, week by week, from zero to consistent sales.</p>
+  <blockquote>A goal without a plan is a wish. A plan without a deadline is a dream. You need both — and 90 days is enough time to have neither excuse.</blockquote>
+  <h3>Phase 1: Build (Weeks 1–4)</h3>
+  <table class="styled-table"><thead><tr><th>Week</th><th>Focus</th><th>Daily Actions (30–60 min)</th></tr></thead><tbody>
+    <tr><td>W1</td><td>Outline &amp; structure</td><td>Full table of contents. Break chapters into bullet points.</td></tr>
+    <tr><td>W2</td><td>Write first half</td><td>One section/day. 400–600 words/session. Do not edit.</td></tr>
+    <tr><td>W3</td><td>Write second half</td><td>Finish core content. Write exercises and bonus material.</td></tr>
+    <tr><td>W4</td><td>Edit, design, package</td><td>Tighten copy. Design cover (Canva). Export to PDF.</td></tr>
+  </tbody></table>
+  <h3>Phase 2: Prepare (Weeks 5–8)</h3>
+  <table class="styled-table"><thead><tr><th>Week</th><th>Focus</th><th>Daily Actions</th></tr></thead><tbody>
+    <tr><td>W5</td><td>Storefront setup</td><td>Create Gumroad. Upload PDF. Write description. Set price.</td></tr>
+    <tr><td>W6</td><td>Landing page + email</td><td>One-page site (Carrd). Set up ConvertKit. Lead magnet.</td></tr>
+    <tr><td>W7</td><td>Start content</td><td>Post 3x on LinkedIn. Teach one thing per post. No selling.</td></tr>
+    <tr><td>W8</td><td>Build momentum</td><td>Email subscribers twice. Post 3x. Engage all comments.</td></tr>
+  </tbody></table>
+  <h3>Phase 3: Launch (Weeks 9–13)</h3>
+  <table class="styled-table"><thead><tr><th>Week</th><th>Focus</th><th>Daily Actions</th></tr></thead><tbody>
+    <tr><td>W9</td><td>Pre-launch</td><td>Build anticipation. Post about the problem. No link yet.</td></tr>
+    <tr><td>W10</td><td><strong>LAUNCH WEEK</strong></td><td>Send launch email Monday. Post daily. Share link.</td></tr>
+    <tr><td>W11</td><td>Post-launch</td><td>Share testimonial. 48-hour discount. Email non-buyers.</td></tr>
+    <tr><td>W12</td><td>Learn &amp; iterate</td><td>Review sales data. Which content drove clicks? Adjust.</td></tr>
+    <tr><td>W13</td><td>Evergreen setup</td><td>Write 5-email welcome sequence. Schedule 3 posts/week.</td></tr>
+  </tbody></table>
+  <h3>The Starter Toolkit (Total Cost: $0)</h3>
+  <table class="styled-table"><thead><tr><th>Task</th><th>Tool</th><th>Cost</th></tr></thead><tbody>
+    <tr><td>Write</td><td>Google Docs / Notion</td><td>Free</td></tr>
+    <tr><td>Design</td><td>Canva</td><td>Free / $13/mo</td></tr>
+    <tr><td>Sell &amp; deliver</td><td>Gumroad or Lemon Squeezy</td><td>Free (5–10% fee)</td></tr>
+    <tr><td>Email list</td><td>ConvertKit or MailerLite</td><td>Free to 1,000 subs</td></tr>
+    <tr><td>Landing page</td><td>Carrd</td><td>Free / $9/yr</td></tr>
+    <tr><td>Social scheduling</td><td>Buffer</td><td>Free plan</td></tr>
+  </tbody></table>
+  <div class="exercise-box"><h4>📝 Chapter 8 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Mark "Launch Week" 90 days from today on your calendar.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Block 30–60 minutes every weekday for the next 90 days.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Set up three core tools this week: payment platform, email tool, design tool.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write the first 400 words of your product today. Not tomorrow. Today.</label></div>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch7')">← Chapter 7</button><button class="nav-btn complete" onclick="markComplete('ch8')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch9">
+  <div class="chapter-label">Chapter 9</div><h2>The Revenue Stack</h2>
+  <p class="chapter-subtitle">From single product to income portfolio that makes your Freedom Number inevitable.</p>
+  <blockquote>One income stream is a job you gave yourself. Three income streams is a business. Five is financial independence.</blockquote>
+  <h3>The Five Revenue Tiers</h3>
+  <table class="styled-table"><thead><tr><th>Tier</th><th>Source</th><th>Target/Mo</th><th>When to Add</th></tr></thead><tbody>
+    <tr><td>1 — Core</td><td>Digital product (PDF/course)</td><td>$500–2K</td><td>Build first</td></tr>
+    <tr><td>2 — Premium</td><td>Upsell / premium version</td><td>$300–1K</td><td>Month 3–4</td></tr>
+    <tr><td>3 — Services</td><td>Consulting / done-for-you</td><td>$500–2K</td><td>As needed</td></tr>
+    <tr><td>4 — Passive</td><td>Affiliate income from tools</td><td>$100–500</td><td>Month 4–6</td></tr>
+    <tr><td>5 — Scale</td><td>Licensing / partnerships</td><td>$200–1K</td><td>Month 6+</td></tr>
+  </tbody></table>
+
+  <h3>The Product Ladder</h3>
+  <table class="styled-table">
+    <thead><tr><th>Step</th><th>What</th><th>Price</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>Free content</td><td>LinkedIn posts, 3x/week</td><td>$0</td><td>Attract the right audience</td></tr>
+      <tr><td>Lead magnet</td><td>Free PDF checklist or template</td><td>$0 (email capture)</td><td>Convert followers to subscribers</td></tr>
+      <tr><td>Core product</td><td>Your main guide or course</td><td>$27–$67</td><td>Convert subscribers to buyers</td></tr>
+      <tr><td>Premium product</td><td>Advanced version or bundle</td><td>$97–$197</td><td>Maximise buyer value</td></tr>
+      <tr><td>Done-for-you</td><td>Consulting or implementation</td><td>$250–$500/session</td><td>High-margin income stream</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warning"><div class="callout-title">⚠️ The Revenue Stack Rule</div><p>Never add a new tier until the previous one generates consistent revenue for at least 60 days. Premature diversification is the most common mistake.</p></div>
+  <div class="exercise-box"><h4>📝 Chapter 9 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Map your Revenue Stack: which tiers are you building first, second, third?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Name your Tier 1 product and Tier 2 upsell concept.</label></div>
+    <textarea data-save="ch9_stack" placeholder="Tier 1: [product] launching by [date]. Tier 2: [upsell] adding by [date]."></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch8')">← Chapter 8</button><button class="nav-btn complete" onclick="markComplete('ch9')">Complete &amp; Continue →</button></div>
+</div>
+
+<!-- CASE STUDY -->
+<div class="chapter" id="casestudy">
+  <div class="chapter-label">Case Study</div><h2>The Corporate Controller's Pivot</h2>
+  <p class="chapter-subtitle">From Senior Finance Manager to digital product business — a real exit executed using this system.</p>
+  <table class="styled-table"><thead><tr><th>The Person</th><th>The Fear</th><th>The Strategy</th></tr></thead><tbody>
+    <tr><td>Sarah — Senior Finance Manager, 10 years at a mid-size B2B firm</td><td>Losing six-figure salary, employer insurance, and professional identity</td><td>Under-the-Radar strategy: 6 months of quiet building</td></tr>
+  </tbody></table>
+  <div class="timeline">
+    <div class="timeline-item"><h5>Months 1–2: The Contract Audit</h5><p>Identified a narrow IP clause. Confirmed her product was outside its scope. Legal green light secured in one evening.</p></div>
+    <div class="timeline-item"><h5>Months 3–4: The Invisible Brand</h5><p>Updated LinkedIn headline. No product mention. By month four: 1,400 followers and two inbound consulting inquiries.</p></div>
+    <div class="timeline-item"><h5>Months 5–6: The Product Build</h5><p>Built a 47-page guide called "The Startup Finance Stack." Build time with AI: 11 days.</p></div>
+    <div class="timeline-item"><h5>Months 7–8: The Launch</h5><p>Launch email to 340 subscribers. First week: 41 copies at $47 = $1,927.</p></div>
+    <div class="timeline-item"><h5>Months 9–12: The Exit</h5><p>Added consulting tier ($350/session) and upsell bundle ($97). Month 12: $4,900/month — 70% of corporate salary. Resigned with funded 6-month buffer.</p></div>
+  </div>
+  <div class="callout key"><div class="callout-title">💡 The Lesson</div><p>Sarah did nothing extraordinary. She read her contract, chose the right format, posted twice per week for six months, and followed the launch plan. The math worked because she let it.</p></div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch9')">← Chapter 9</button><button class="nav-btn complete" onclick="markComplete('casestudy')">Complete &amp; Continue →</button></div>
+</div>
+
+<!-- CHAPTERS 10-20 (exercise-focused) -->
+<div class="chapter" id="ch10">
+  <div class="chapter-label">Chapter 10</div><h2>The Contract Audit</h2>
+  <p class="chapter-subtitle">IP ownership, non-competes, and the legal foundations you must understand before you build.</p>
+  <blockquote>The most expensive legal mistake is not reading a contract before you sign it. The second most expensive is not re-reading it before you build something.</blockquote>
+  <h3>The Three Clauses That Derail Exits</h3>
+  <table class="styled-table"><thead><tr><th>Clause</th><th>What It Says</th><th>Risk</th></tr></thead><tbody>
+    <tr><td><strong>IP Assignment</strong></td><td>"Work related to company business is company property"</td><td>Your product claimed if it overlaps with their industry</td></tr>
+    <tr><td><strong>Non-Compete</strong></td><td>"No competing business for X months"</td><td>Could prevent operating in your industry after exit</td></tr>
+    <tr><td><strong>Non-Solicitation</strong></td><td>"Do not approach our clients or employees"</td><td>Limits who you can sell to initially</td></tr>
+  </tbody></table>
+  <div class="tool-card"><div class="tool-header"><span class="tool-icon">📋</span><h4>Contract Audit Checklist</h4></div><div class="tool-body">
+    <div class="checklist-item"><input type="checkbox"> <label>Locate your employment contract (original signed copy).</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Search for: "intellectual property," "IP," "inventions," "work product."</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Search for: "non-compete," "restrictive covenant," "competitive activity."</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Search for: "non-solicitation," "clients," "customers."</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Search for: "confidentiality," "trade secrets," "proprietary information."</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Note duration, geographic scope, and industry scope of each clause.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Confirm your product does NOT overlap with employer's industry.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>If any clause is ambiguous: book a 30-min employment lawyer consultation ($100–$300).</label></div>
+  </div></div>
+  <div class="exercise-box"><h4>📝 Chapter 10 Exercise</h4>
+    <textarea data-save="ch10_audit" placeholder="IP clause status: [clear / ambiguous / risky]&#10;Non-compete: [none / X months / X months but narrow scope]&#10;Non-solicitation: [none / applies / irrelevant to digital products]&#10;Action needed: [none / lawyer consult / HR clarification]" style="min-height:100px"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('casestudy')">← Case Study</button><button class="nav-btn complete" onclick="markComplete('ch10')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch11">
+  <div class="chapter-label">Chapter 11</div><h2>The Tax Transition</h2>
+  <p class="chapter-subtitle">Self-employment financial architecture — what changes when you stop receiving a payslip.</p>
+
+  <p>When you leave employment, several financial systems change simultaneously: tax withholding stops, employer benefits end, and you become responsible for quarterly estimated payments. This chapter builds the financial infrastructure you need before Day One.</p>
+
+  <blockquote>The number one financial mistake new self-employed people make is not setting aside taxes from day one. Revenue is not income. A $5,000 month with no tax reserve is a $3,500 month with a future surprise.</blockquote>
+
+  <h3>What Changes When You Leave</h3>
+  <table class="styled-table">
+    <thead><tr><th>As an Employee</th><th>As Self-Employed</th><th>Action Required</th></tr></thead>
+    <tbody>
+      <tr><td>Tax withheld automatically</td><td>You pay quarterly estimates</td><td>Set up quarterly payment calendar</td></tr>
+      <tr><td>Employer pays half of social/national insurance</td><td>You pay the full amount</td><td>Budget 15–30% extra on top of income tax</td></tr>
+      <tr><td>Health insurance subsidised</td><td>You fund it yourself</td><td>Research marketplace options (see Ch.4)</td></tr>
+      <tr><td>Retirement contributions matched</td><td>No match; you choose your vehicle</td><td>Set up self-employed pension/IRA</td></tr>
+      <tr><td>Expenses handled by employer</td><td>Business expenses are tax-deductible</td><td>Track every business expense from day one</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The Tax Reserve System</h3>
+  <p>Every time you receive revenue, move a fixed percentage to a separate account immediately — before you spend anything. This is non-negotiable.</p>
+  <table class="styled-table">
+    <thead><tr><th>Country</th><th>Recommended Reserve %</th><th>Covers</th></tr></thead>
+    <tbody>
+      <tr><td>United States</td><td>25–30%</td><td>Federal income tax + self-employment tax (15.3%)</td></tr>
+      <tr><td>United Kingdom</td><td>25–30%</td><td>Income tax + National Insurance Class 2 &amp; 4</td></tr>
+      <tr><td>EU / Denmark</td><td>35–42%</td><td>Income tax + social contributions (varies by country)</td></tr>
+      <tr><td>Canada</td><td>25–30%</td><td>Federal + provincial income tax + CPP</td></tr>
+      <tr><td>Australia</td><td>25–30%</td><td>Income tax + Medicare levy</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout tip">
+    <div class="callout-title">💡 The Two-Account Rule</div>
+    <p>Open two accounts: a <strong>Business Operating</strong> account (revenue comes in, expenses go out) and a <strong>Tax Reserve</strong> account (percentage auto-transferred on every deposit, only touched for tax payments). This single habit prevents the most common self-employment financial disaster.</p>
+  </div>
+
+  <h3>Deductible Expenses to Track From Day One</h3>
+  <table class="styled-table">
+    <thead><tr><th>Expense</th><th>Examples</th><th>Typical Annual Value</th></tr></thead>
+    <tbody>
+      <tr><td>Home office</td><td>Dedicated room or percentage of rent/mortgage</td><td>$1,200–$5,000</td></tr>
+      <tr><td>Software &amp; tools</td><td>Canva, email platform, hosting, AI subscriptions</td><td>$500–$2,000</td></tr>
+      <tr><td>Professional development</td><td>Courses, books, conferences</td><td>$200–$1,000</td></tr>
+      <tr><td>Internet &amp; phone</td><td>Business percentage of personal bills</td><td>$300–$800</td></tr>
+      <tr><td>Marketing</td><td>Ads, design, copywriting</td><td>$0–$2,000</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exercise-box"><h4>📝 Chapter 11 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Research self-employment tax requirements in your country/state.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Open a separate business bank account this week.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Open a Tax Reserve account and set up auto-transfer (25–30% of deposits).</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Set quarterly tax payment dates in your calendar.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify a small-business accountant (ask other freelancers for referrals).</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Start an expense tracking spreadsheet or app today.</label></div>
+    <textarea data-save="ch11_tax" placeholder="My tax reserve rate: ___% &#10;Quarterly payment dates: ___ &#10;Accountant: [name/status]"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch10')">← Chapter 10</button><button class="nav-btn complete" onclick="markComplete('ch11')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch12">
+  <div class="chapter-label">Chapter 12</div><h2>The Fear Engineering Manual</h2>
+  <p class="chapter-subtitle">Every anxiety, deconstructed. Every objection, answered with arithmetic.</p>
+
+  <p>Fear is not irrational — it is miscalibrated. Your brain is running worst-case scenarios based on incomplete data. This chapter gives it better data. Every fear below has a specific, measurable counter-argument. The goal is not to eliminate fear. It is to make fear compete with evidence.</p>
+
+  <blockquote>Courage is not the absence of fear. It is the presence of a spreadsheet that proves the fear is wrong.</blockquote>
+
+  <h3>The Fear Inventory</h3>
+  <table class="styled-table"><thead><tr><th>Fear</th><th>What It Feels Like</th><th>What the Data Says</th></tr></thead><tbody>
+    <tr><td>Financial ruin</td><td>"I'll lose everything"</td><td>Your Freedom Number is 30–45% below gross salary. The gap is smaller than you think.</td></tr>
+    <tr><td>Identity loss</td><td>"Who am I without my title?"</td><td>Identity rebuilds in 90 days with intentional work (Chapter 18).</td></tr>
+    <tr><td>Social judgment</td><td>"People will think I failed"</td><td>Most people are too busy with their own anxiety to track yours.</td></tr>
+    <tr><td>Irreversibility</td><td>"What if I can't go back?"</td><td>85% of professionals who leave corporate can return within 12 months if needed.</td></tr>
+    <tr><td>Imposter syndrome</td><td>"Who would pay me?"</td><td>41 people paid Sarah $47 in week one. Proof of value is $47 away.</td></tr>
+  </tbody></table>
+  <div class="exercise-box"><h4>📝 Chapter 12 Exercise</h4>
+    <textarea data-save="ch12_fears" placeholder="My top 3 fears:&#10;1. ___&#10;   Data-based response: ___&#10;2. ___&#10;   Data-based response: ___&#10;3. ___&#10;   Data-based response: ___" style="min-height:120px"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch11')">← Chapter 11</button><button class="nav-btn complete" onclick="markComplete('ch12')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch13">
+  <div class="chapter-label">Chapter 13</div><h2>The Five Signals</h2>
+  <p class="chapter-subtitle">Measurable criteria for your resignation date — not feelings, not impulses, not frustration.</p>
+  <div class="tool-card"><div class="tool-header"><span class="tool-icon">🚦</span><h4>Quit Criteria Dashboard</h4></div><div class="tool-body">
+    <div class="checklist-item"><input type="checkbox" id="sig1"> <label><strong>Signal 1 — Income:</strong> Side income ≥ 50% of Freedom Number for 3+ consecutive months.</label></div>
+    <div class="checklist-item"><input type="checkbox" id="sig2"> <label><strong>Signal 2 — Buffer:</strong> 6-month financial buffer fully funded in separate account.</label></div>
+    <div class="checklist-item"><input type="checkbox" id="sig3"> <label><strong>Signal 3 — Legal:</strong> Contract audited. No IP/non-compete risks. Insurance bridge planned.</label></div>
+    <div class="checklist-item"><input type="checkbox" id="sig4"> <label><strong>Signal 4 — Audience:</strong> Email list ≥ 300 subscribers OR consistent inbound interest.</label></div>
+    <div class="checklist-item"><input type="checkbox" id="sig5"> <label><strong>Signal 5 — Conviction:</strong> You can describe your business, audience, and revenue model in one sentence.</label></div>
+    <div class="callout key" style="margin-top:16px"><div class="callout-title">The Rule</div><p>You need all five signals green before you resign. Three out of five is not "close enough." It is premature.</p></div>
+  </div></div>
+  <div class="exercise-box"><h4>📝 Chapter 13 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Review each signal above. Which ones are green today? Which need work?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>For each red signal, write the specific milestone that would turn it green.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Set a monthly check-in date to re-assess all five signals.</label></div>
+    <textarea data-save="ch13_signals" placeholder="Signal status today:&#10;1. Income: [red/yellow/green] — need: ___&#10;2. Buffer: [red/yellow/green] — need: ___&#10;3. Legal: [red/yellow/green] — need: ___&#10;4. Audience: [red/yellow/green] — need: ___&#10;5. Conviction: [red/yellow/green] — need: ___" style="min-height:100px"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch12')">← Chapter 12</button><button class="nav-btn complete" onclick="markComplete('ch13')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch14">
+  <div class="chapter-label">Chapter 14</div><h2>The 8-Week Transition Protocol</h2>
+  <p class="chapter-subtitle">From decision to Day One — the operational checklist for leaving well.</p>
+  <div class="timeline">
+    <div class="timeline-item"><h5>Week 1–2: Internal Preparation</h5><p>Notify HR. Agree on final date. Document all handover items. Secure references.</p></div>
+    <div class="timeline-item"><h5>Week 3–4: Financial Lockdown</h5><p>Final buffer check. Cancel unnecessary subscriptions. Set up business accounts. File any pending expense claims.</p></div>
+    <div class="timeline-item"><h5>Week 5–6: Knowledge Transfer</h5><p>Train your replacement. Complete handover documents. Maintain professionalism — burn zero bridges.</p></div>
+    <div class="timeline-item"><h5>Week 7–8: Launch Preparation</h5><p>Finalize product. Set up sales infrastructure. Schedule first month of content. Build Day One schedule.</p></div>
+  </div>
+  <div class="exercise-box"><h4>📝 Chapter 14 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Choose your resignation date. Write it down.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Draft your resignation letter (professional, brief, grateful).</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Build your Day One schedule: what will you do on your first free Monday?</label></div>
+    <textarea data-save="ch14_schedule" placeholder="My resignation date: ___&#10;Day One schedule: ___"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch13')">← Chapter 13</button><button class="nav-btn complete" onclick="markComplete('ch14')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch15">
+  <div class="chapter-label">Chapter 15</div><h2>Freedom Shock</h2>
+  <p class="chapter-subtitle">The first 90 days nobody warns you about — and how to navigate them.</p>
+  <p>The Monday morning after you resign will feel extraordinary for about 72 hours. Then a quieter, stranger feeling arrives: the absence of structure. Freedom Shock is real, predictable, and temporary.</p>
+  <h3>The Adjustment Timeline</h3>
+  <table class="styled-table"><thead><tr><th>Phase</th><th>When</th><th>What Happens</th><th>What to Do</th></tr></thead><tbody>
+    <tr><td>Euphoria</td><td>Days 1–7</td><td>Relief, excitement, energy</td><td>Enjoy it. Don't overcommit.</td></tr>
+    <tr><td>Drift</td><td>Days 8–21</td><td>No structure, restlessness</td><td>Implement your daily schedule.</td></tr>
+    <tr><td>Doubt</td><td>Days 22–45</td><td>"Did I make a mistake?"</td><td>Re-read Chapter 1. Check your numbers.</td></tr>
+    <tr><td>Rhythm</td><td>Days 46–90</td><td>New normal establishes</td><td>Protect what's working. Iterate.</td></tr>
+  </tbody></table>
+  <div class="exercise-box"><h4>📝 Chapter 15 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Build your Day One schedule: wake time, work blocks, exercise, meals.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify one accountability partner or community to join in week 1.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write your "Drift Protocol" — what you will do when structure disappears.</label></div>
+    <textarea data-save="ch15_drift" placeholder="When I feel lost, I will: (1) ___ (2) ___ (3) ___"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch14')">← Chapter 14</button><button class="nav-btn complete" onclick="markComplete('ch15')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch16">
+  <div class="chapter-label">Chapter 16</div><h2>The AI Operations Manual</h2>
+  <p class="chapter-subtitle">Your unpaid team of specialists — prompts for every stage of the build.</p>
+  <p>AI does not replace your expertise. It removes the bottleneck between having expertise and expressing it productively.</p>
+  <h3>AI-Assisted Workflow</h3>
+  <table class="styled-table"><thead><tr><th>Task</th><th>Without AI</th><th>With AI</th><th>Your Role</th></tr></thead><tbody>
+    <tr><td>Table of contents</td><td>2–3 days</td><td>30–60 min</td><td>Refine structure, add unique angle</td></tr>
+    <tr><td>Chapter drafts</td><td>2–3 days each</td><td>2–4 hrs each</td><td>Add real examples, rewrite key sections</td></tr>
+    <tr><td>Exercises</td><td>1–2 hrs each</td><td>10–15 min each</td><td>Adjust to your audience's reality</td></tr>
+    <tr><td>Sales page</td><td>1–2 days</td><td>1–2 hrs</td><td>Inject your voice and proof points</td></tr>
+    <tr><td>Email sequence</td><td>3–5 days</td><td>2–3 hrs</td><td>Personalise with your story</td></tr>
+  </tbody></table>
+  <div class="exercise-box"><h4>📝 Chapter 16 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Choose your primary AI tool (Claude, ChatGPT, or Gemini).</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Run one prompt: draft a table of contents for your product using AI.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Compare AI-generated draft to your expertise. Edit it — don't publish it raw.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Time yourself: how long did the AI-assisted version take vs. your estimate for manual?</label></div>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch15')">← Chapter 15</button><button class="nav-btn complete" onclick="markComplete('ch16')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch17">
+  <div class="chapter-label">Chapter 17</div><h2>The Relationship Playbook</h2>
+  <p class="chapter-subtitle">Scripts for partners, parents, and skeptics — every difficult conversation, prepared.</p>
+  <h3>Conversation Scripts</h3>
+  <table class="styled-table"><thead><tr><th>Audience</th><th>Their Concern</th><th>Your Response</th></tr></thead><tbody>
+    <tr><td>Partner/Spouse</td><td>"Can we afford this?"</td><td>"Here's our Freedom Number worksheet. We need $X/month, not $Y. And we have a Z-month buffer."</td></tr>
+    <tr><td>Parents</td><td>"You're throwing away your career"</td><td>"I'm not quitting work. I'm changing who I work for. Let me show you the plan."</td></tr>
+    <tr><td>Former colleagues</td><td>"Just personal projects?"</td><td>"Building an education business in [niche]. Going well."</td></tr>
+    <tr><td>Skeptics</td><td>"Most businesses fail"</td><td>"Most businesses require $50K+ in capital. Mine required a laptop and 90 days."</td></tr>
+  </tbody></table>
+  <div class="exercise-box"><h4>📝 Chapter 17 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify the 3 most important conversations you need to have before resigning.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Write your script for each using the table above.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Practice the partner/spouse conversation out loud — not just in your head.</label></div>
+    <textarea data-save="ch17_scripts" placeholder="Conversation 1: ___ (with: ___) Key message: ___&#10;Conversation 2: ___ (with: ___) Key message: ___&#10;Conversation 3: ___ (with: ___) Key message: ___"></textarea>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch16')">← Chapter 16</button><button class="nav-btn complete" onclick="markComplete('ch17')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch18">
+  <div class="chapter-label">Chapter 18</div><h2>Identity Reconstruction</h2>
+  <p class="chapter-subtitle">Who you become after the title — building a new professional identity from scratch.</p>
+
+  <p>For a decade or more, you have introduced yourself by your title and your employer. "I'm a finance manager at [Company]." That sentence did two jobs: it told people what you do, and it told you who you are. When the title disappears, the second job goes unfilled — and the silence is louder than most people expect.</p>
+
+  <blockquote>Nobody warns you that the hardest part of leaving corporate is not the money. It is answering "What do you do?" without flinching.</blockquote>
+
+  <h3>The Five Identity Challenges</h3>
+  <table class="styled-table">
+    <thead><tr><th>Challenge</th><th>What It Feels Like</th><th>What to Do</th></tr></thead>
+    <tbody>
+      <tr><td>Status Vacuum</td><td>No title, no team, no org chart position</td><td>Define yourself by who you help, not who employs you</td></tr>
+      <tr><td>Structure Loss</td><td>No meetings, no deadlines, no one checking</td><td>Build your own operating rhythm (Chapter 15)</td></tr>
+      <tr><td>Expertise Doubt</td><td>"Am I still an expert without the company name?"</td><td>Track proof: testimonials, repeat buyers, inbound inquiries</td></tr>
+      <tr><td>Social Mirror</td><td>No colleagues to reflect your value back</td><td>Join communities. Weekly co-working. Accountability partner.</td></tr>
+      <tr><td>Comparison Trap</td><td>Benchmarking against others' visible success</td><td>Compare only to 90-days-ago you. The only valid benchmark.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>What to Say When Asked "What Do You Do?"</h3>
+  <table class="styled-table">
+    <thead><tr><th>Context</th><th>Avoid</th><th>Say Instead</th></tr></thead>
+    <tbody>
+      <tr><td>Casual</td><td>"Used to be in corporate, figuring things out."</td><td>"I help [people] with [problem] through [format]."</td></tr>
+      <tr><td>Professional</td><td>"Just left corporate for entrepreneurship."</td><td>"I run a [business type] for [profile] on [problem]."</td></tr>
+      <tr><td>Family</td><td>"Doing some online stuff."</td><td>"I write and teach [topic]. People pay to learn it."</td></tr>
+      <tr><td>Former colleague</td><td>"Just personal projects."</td><td>"Building an education business in [niche]. Going well."</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout tip">
+    <div class="callout-title">💡 The Proof File</div>
+    <p>Start a document today. Every testimonial, every revenue milestone, every grateful message goes in it. On the days when imposter syndrome hits — and it will — open the Proof File instead of your inner monologue. Evidence beats anxiety every time.</p>
+  </div>
+
+  <div class="exercise-box"><h4>📝 Identity Builder</h4>
+    <div class="input-group"><label>Casual: "What do you do?"</label><textarea data-save="ch18_casual" placeholder="I help [people] with [problem] through [format]."></textarea></div>
+    <div class="input-group"><label>Professional: "What do you do?"</label><textarea data-save="ch18_pro" placeholder="I run a [business type] for [profile] on [problem]."></textarea></div>
+    <div class="input-group"><label>Your founding story (5 sentences):</label><textarea data-save="ch18_story" placeholder="Why I left. What I build. Who I help. What's at stake. Why I'm the right person." style="min-height:80px"></textarea></div>
+    <div class="input-group"><label>Your new identity:</label><textarea data-save="ch18_identity" placeholder="I am a ___. I help ___. My work matters because ___."></textarea></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Start your Proof File today — add your first entry (even first sale or first follower).</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Set a 90-day identity milestone: "The transition is working when ___."</label></div>
+  </div>
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch17')">← Chapter 17</button><button class="nav-btn complete" onclick="markComplete('ch18')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch19">
+  <div class="chapter-label">Chapter 19</div><h2>The Scaling Protocols</h2>
+  <p class="chapter-subtitle">From Freedom Number to Wealth Number — what happens after the exit works.</p>
+  <blockquote>The Freedom Number bought you time. The Wealth Number buys you options. They require different strategies.</blockquote>
+  <div class="tool-card"><div class="tool-header"><span class="tool-icon">📈</span><h4>Wealth Number Calculator</h4></div><div class="tool-body">
+    <div class="input-group"><label>Your Freedom Number ($/mo)</label><input type="number" id="wealth_fn" data-save="wealth_fn" placeholder="From Ch.1" oninput="calcWealth()"></div>
+    <div class="result-card">
+      <div class="result-label">Your Wealth Number</div>
+      <div class="result-value" id="wealth_result">$0</div>
+      <div class="result-note">Freedom Number × 1.45</div>
+      <div class="result-grid" style="margin-top:12px"><div class="result-mini"><div class="result-label">+ Savings (20%)</div><div class="result-value" id="wealth_savings" style="font-size:18px">$0</div></div><div class="result-mini"><div class="result-label">+ Investing (10%)</div><div class="result-value" id="wealth_invest" style="font-size:18px">$0</div></div><div class="result-mini"><div class="result-label">+ Lifestyle (10%)</div><div class="result-value" id="wealth_lifestyle" style="font-size:18px">$0</div></div></div>
+    </div>
+  </div></div>
+  <div class="callout warning"><div class="callout-title">⚠️ The Freedom Protection Rule</div><p>Never scale in a way that makes you feel employed again. If growth requires more than 30 hours per week consistently, you have built another job, not a business.</p></div>
+
+  <h3>Scaling Without Losing Freedom</h3>
+  <table class="styled-table">
+    <thead><tr><th>Method</th><th>Freedom Impact</th><th>Revenue</th><th>Recommended?</th></tr></thead>
+    <tbody>
+      <tr><td>Raise prices</td><td>None — same work</td><td>High</td><td style="color:var(--green)"><strong>YES — do first</strong></td></tr>
+      <tr><td>Create premium tier</td><td>Low — slightly more work</td><td>High</td><td style="color:var(--green)"><strong>YES — do second</strong></td></tr>
+      <tr><td>Add affiliate income</td><td>None — passive</td><td>Medium</td><td style="color:var(--green)">YES</td></tr>
+      <tr><td>Hire VA for admin</td><td>Positive — frees time</td><td>Indirect</td><td>YES after $3K/mo</td></tr>
+      <tr><td>Take more clients</td><td>Negative — trades time</td><td>High</td><td style="color:var(--gold)">CAUTIOUSLY</td></tr>
+      <tr><td>Build course platform</td><td>High initial investment</td><td>Very high long-term</td><td>AFTER 12 months</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exercise-box"><h4>📝 Chapter 19 Exercise</h4>
+    <div class="checklist-item"><input type="checkbox"> <label>Calculate your Wealth Number using the calculator above.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Identify which growth lever to pull first: price, volume, or products.</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>List 3 tasks you currently do that a $15/hr VA could handle.</label></div>
+    <textarea data-save="ch19_scaling" placeholder="Growth lever 1: ___&#10;12-month revenue target: $___/month&#10;VA tasks: (1) ___ (2) ___ (3) ___"></textarea>
+  </div>
+
+  <div class="chapter-nav"><button class="nav-btn prev" onclick="navigate('ch18')">← Chapter 18</button><button class="nav-btn complete" onclick="markComplete('ch19')">Complete &amp; Continue →</button></div>
+</div>
+
+<div class="chapter" id="ch20">
+  <div class="chapter-label">Chapter 20</div><h2>The 365-Day Retrospective</h2>
+  <p class="chapter-subtitle">Your annual operating review — the system that turns one year of freedom into a lifetime of intentional growth.</p>
+  <blockquote>The version of you that started this course and the version completing this exercise are not the same person. Measuring the distance between them is the most valuable thing you can do on your anniversary.</blockquote>
+  <div class="tool-card"><div class="tool-header"><span class="tool-icon">🎯</span><h4>Year-One Scorecard</h4></div><div class="tool-body">
+    <div class="checklist-item"><input type="checkbox"> <label>Monthly income at Freedom Number consistently?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>6-month buffer maintained?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>1–3 products shipped?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>500+ email subscribers?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Average weekly hours worked < 30?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Physical health maintained?</label></div>
+    <div class="checklist-item"><input type="checkbox"> <label>Would make the same decision again?</label></div>
+  </div></div>
+  <div class="exercise-box"><h4>📝 Year-Two Planning</h4>
+    <textarea data-save="ch20_priorities" placeholder="My three priorities for the next 12 months:&#10;1. ___&#10;2. ___&#10;3. ___" style="min-height:100px"></textarea>
+  </div>
+
+  <div class="callout key" style="margin-top:32px">
+    <div class="callout-title">🎉 Congratulations</div>
+    <p>You now have: a Freedom Number, a validated product idea, a sprint plan, a launch system, a revenue stack, a financial buffer target, five quit signals, a transition protocol, an AI toolkit, conversation scripts, and a retrospective system. The 12-month clock starts when you decide it does. <strong>Start it today.</strong></p>
+  </div>
+
+  <div class="chapter-nav">
+    <button class="nav-btn prev" onclick="navigate('ch19')">← Chapter 19</button>
+    <button class="nav-btn complete" onclick="markComplete('ch20')">🎉 Complete the Course</button>
+  </div>
+</div>
+
+</main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
