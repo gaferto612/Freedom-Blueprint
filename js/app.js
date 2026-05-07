@@ -2,7 +2,8 @@
 const state = {
   currentChapter: localStorage.getItem('fb_chapter') || 'intro',
   completed: JSON.parse(localStorage.getItem('fb_completed') || '[]'),
-  data: JSON.parse(localStorage.getItem('fb_data') || '{}')
+  data: JSON.parse(localStorage.getItem('fb_data') || '{}'),
+  lang: localStorage.getItem('fb_lang') || null
 };
 
 function saveState() {
@@ -56,13 +57,64 @@ function updateProgress() {
   const bar = document.querySelector('.progress-bar-fill');
   const text = document.querySelector('.progress-text');
   if (bar) bar.style.width = pct + '%';
-  if (text) text.textContent = `${done} of ${total} completed · ${Math.round(pct)}%`;
+  if (text) {
+    text.textContent = state.lang === 'ar'
+      ? `أُنجز ${done} من ${total} · ${Math.round(pct)}٪`
+      : `${done} of ${total} completed · ${Math.round(pct)}%`;
+  }
   document.querySelectorAll('.nav-item').forEach(item => {
     if (state.completed.includes(item.dataset.chapter)) {
       item.classList.add('completed');
       item.querySelector('.nav-check').innerHTML = '✓';
     }
   });
+}
+
+/* ─── LANGUAGE / I18N ─── */
+const _i18nOriginal = new WeakMap();
+
+function setLanguage(lang) {
+  if (lang !== 'en' && lang !== 'ar') lang = 'en';
+  state.lang = lang;
+  localStorage.setItem('fb_lang', lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('lang-ar', lang === 'ar');
+
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    if (!_i18nOriginal.has(el)) _i18nOriginal.set(el, el.innerHTML);
+    el.innerHTML = lang === 'ar' ? el.dataset.ar : _i18nOriginal.get(el);
+  });
+
+  document.querySelectorAll('[data-ar-placeholder]').forEach(el => {
+    const key = '__ph__';
+    if (!_i18nOriginal.has(el)) _i18nOriginal.set(el, el.placeholder || '');
+    el.placeholder = lang === 'ar' ? (el.dataset.arPlaceholder || '') : _i18nOriginal.get(el);
+  });
+
+  document.querySelectorAll('.lang-toggle button').forEach(b =>
+    b.classList.toggle('active', b.dataset.lang === lang)
+  );
+
+  updateProgress();
+  if (getField('fn_housing') || getField('fn_food')) calcFreedomNumber();
+  if (getField('buf_fn') || getField('buf_current')) calcBuffer();
+  if (getField('wealth_fn')) calcWealth();
+  updateScore();
+}
+
+function pickLanguage(lang) {
+  setLanguage(lang);
+  document.getElementById('langModal').classList.remove('show');
+}
+
+function fmtMoney(n) {
+  const sign = state.lang === 'ar' ? '$' : '$';
+  return sign + (Number(n) || 0).toLocaleString(state.lang === 'ar' ? 'en-US' : 'en-US');
+}
+
+function tr(en, ar) {
+  return state.lang === 'ar' ? ar : en;
 }
 
 /* ─── MOBILE ─── */
@@ -105,7 +157,9 @@ function calcFreedomNumber() {
   const gap = Math.max(0, adjusted - sideIncome);
   document.getElementById('fn_gap').textContent = '$' + gap.toLocaleString();
   const daily = Math.round(gap / 30);
-  document.getElementById('fn_daily').textContent = '$' + daily + '/day';
+  document.getElementById('fn_daily').textContent = state.lang === 'ar'
+    ? '$' + daily + ' / يوميًا'
+    : '$' + daily + '/day';
 
   saveField('freedomNumber', freedom);
   saveField('gap', gap);
@@ -128,11 +182,17 @@ function calcBuffer() {
 
   document.getElementById('buf_target').textContent = '$' + target.toLocaleString();
   document.getElementById('buf_remaining').textContent = '$' + remaining.toLocaleString();
-  document.getElementById('buf_timeline').textContent = monthsNeeded === Infinity ? '—' : monthsNeeded + ' months';
+  document.getElementById('buf_timeline').textContent = monthsNeeded === Infinity
+    ? '—'
+    : (state.lang === 'ar' ? monthsNeeded + ' شهرًا' : monthsNeeded + ' months');
 
   const date = new Date();
   date.setMonth(date.getMonth() + monthsNeeded);
-  document.getElementById('buf_date').textContent = monthsNeeded === Infinity ? 'Set a savings rate' : date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  const locale = state.lang === 'ar' ? 'ar-EG' : 'en-US';
+  const noRateMsg = state.lang === 'ar' ? 'حدّد معدل ادخار' : 'Set a savings rate';
+  document.getElementById('buf_date').textContent = monthsNeeded === Infinity
+    ? noRateMsg
+    : date.toLocaleDateString(locale, { month: 'long', year: 'numeric' });
 }
 
 function calcCompensation() {
@@ -153,10 +213,17 @@ function calcCompensation() {
   document.getElementById('comp_opp').textContent = '$' + oppCost.toLocaleString();
 
   const net = totalLost - oppCost;
-  document.getElementById('comp_verdict').textContent = net > 0
-    ? `Waiting saves you $${net.toLocaleString()} net. Consider staying.`
-    : `Leaving now gains you $${Math.abs(net).toLocaleString()} in growth. Consider going.`;
-  document.getElementById('comp_verdict').className = 'result-note ' + (net > 0 ? '' : 'positive');
+  const verdict = document.getElementById('comp_verdict');
+  if (state.lang === 'ar') {
+    verdict.textContent = net > 0
+      ? `الانتظار يوفّر لك $${net.toLocaleString()} صافيًا. ربما تبقى.`
+      : `المغادرة الآن تكسبك $${Math.abs(net).toLocaleString()} نموًا. ربما تذهب.`;
+  } else {
+    verdict.textContent = net > 0
+      ? `Waiting saves you $${net.toLocaleString()} net. Consider staying.`
+      : `Leaving now gains you $${Math.abs(net).toLocaleString()} in growth. Consider going.`;
+  }
+  verdict.className = 'result-note ' + (net > 0 ? '' : 'positive');
 }
 
 function calcWealth() {
@@ -195,17 +262,18 @@ function updateScore() {
   document.getElementById('score_total').textContent = total;
   const max = document.querySelectorAll('.score-row').length * 5;
   const el = document.getElementById('score_verdict');
+  const ar = state.lang === 'ar';
   if (answered === 0) {
-    el.textContent = 'Rate each question';
+    el.textContent = ar ? 'قيّم كل سؤال' : 'Rate each question';
     el.className = 'score-verdict';
   } else if (total >= 20) {
-    el.textContent = '✓ BUILD IT — Strong idea';
+    el.textContent = ar ? '✓ ابنه — فكرة قوية' : '✓ BUILD IT — Strong idea';
     el.className = 'score-verdict green';
   } else if (total >= 12) {
-    el.textContent = '⟳ REFINE — Good potential, needs work';
+    el.textContent = ar ? '⟳ حسّنها — إمكانية جيدة، تحتاج عملًا' : '⟳ REFINE — Good potential, needs work';
     el.className = 'score-verdict gold';
   } else {
-    el.textContent = '✗ PIVOT — Find a stronger idea';
+    el.textContent = ar ? '✗ غيّر الفكرة — ابحث عن أقوى' : '✗ PIVOT — Find a stronger idea';
     el.className = 'score-verdict red';
   }
 }
@@ -220,6 +288,13 @@ function toggleSprint(day) {
 
 /* ─── INIT ─── */
 document.addEventListener('DOMContentLoaded', () => {
+  // Language: prompt on first visit, otherwise apply saved preference.
+  if (state.lang) {
+    setLanguage(state.lang);
+  } else {
+    document.getElementById('langModal').classList.add('show');
+  }
+
   // Nav clicks
   document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', () => navigate(item.dataset.chapter));
@@ -273,7 +348,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ─── RESET ─── */
 function resetProgress() {
-  if (confirm('Reset all progress and saved data? This cannot be undone.')) {
+  const msg = state.lang === 'ar'
+    ? 'إعادة ضبط كل التقدّم والبيانات المحفوظة؟ لا يمكن التراجع.'
+    : 'Reset all progress and saved data? This cannot be undone.';
+  if (confirm(msg)) {
     localStorage.removeItem('fb_completed');
     localStorage.removeItem('fb_data');
     location.reload();
