@@ -743,3 +743,148 @@ body {
   .score-buttons { gap: 2px; }
   .score-btn { width: 30px; height: 30px; font-size: 11px; }
 }
+
+/* ─── LANGUAGE PICKER MODAL ─── */
+.lang-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 39, 68, 0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.lang-modal-overlay.show { display: flex; }
+.lang-modal {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  max-width: 460px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+.lang-modal h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.lang-modal p {
+  color: var(--text-light);
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+.lang-modal .lang-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.lang-modal .lang-btn {
+  padding: 18px 16px;
+  border: 1.5px solid var(--border);
+  background: white;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.lang-modal .lang-btn:hover {
+  border-color: var(--gold);
+  background: var(--gold-pale);
+}
+.lang-modal .lang-btn .lang-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.lang-modal .lang-btn .lang-sub {
+  display: block;
+  font-size: 12px;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+.lang-modal .lang-btn[data-lang="ar"] .lang-name {
+  font-family: 'Source Sans 3', 'Tahoma', sans-serif;
+  font-size: 22px;
+  direction: rtl;
+}
+
+/* ─── SIDEBAR LANGUAGE TOGGLE ─── */
+.lang-toggle {
+  display: flex;
+  gap: 4px;
+  padding: 10px 24px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.lang-toggle button {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.55);
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+}
+.lang-toggle button:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+.lang-toggle button.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+}
+
+/* ─── ARABIC / RTL OVERRIDES ─── */
+html[dir="rtl"] body {
+  font-family: 'Tahoma', 'Segoe UI', 'Source Sans 3', sans-serif;
+}
+html[dir="rtl"] .sidebar { left: auto; right: 0; }
+html[dir="rtl"] .main { margin-left: 0; margin-right: 300px; }
+html[dir="rtl"] .nav-item { border-left: 3px solid transparent; border-right: 3px solid transparent; }
+html[dir="rtl"] .nav-item.active { border-left-color: transparent; border-right-color: var(--gold); }
+html[dir="rtl"] .timeline { padding-left: 0; padding-right: 28px; }
+html[dir="rtl"] .timeline::before { left: auto; right: 8px; }
+html[dir="rtl"] .timeline-item { padding: 12px 24px 24px 0; }
+html[dir="rtl"] .timeline-item::before { left: auto; right: -24px; }
+html[dir="rtl"] .chapter blockquote {
+  border-left: none;
+  border-right: 3px solid var(--gold);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+html[dir="rtl"] .callout.tip,
+html[dir="rtl"] .callout.warning,
+html[dir="rtl"] .callout.key {
+  border-left: 1px solid var(--border);
+}
+html[dir="rtl"] .callout.tip { border-right: 4px solid var(--green); }
+html[dir="rtl"] .callout.warning { border-right: 4px solid var(--gold); }
+html[dir="rtl"] .callout.key { border-right: 4px solid var(--navy); }
+html[dir="rtl"] .styled-table thead th { text-align: right; }
+html[dir="rtl"] .input-group label { letter-spacing: 0; }
+html[dir="rtl"] .chapter h2,
+html[dir="rtl"] .chapter h3,
+html[dir="rtl"] .lang-modal h2 {
+  font-family: 'Tahoma', 'Segoe UI', serif;
+  letter-spacing: 0;
+}
+html[dir="rtl"] .chapter-label,
+html[dir="rtl"] .nav-part-label,
+html[dir="rtl"] .progress-text,
+html[dir="rtl"] .result-label {
+  letter-spacing: 0;
+}
+@media (max-width: 900px) {
+  html[dir="rtl"] .sidebar { transform: translateX(100%); }
+  html[dir="rtl"] .sidebar.open { transform: translateX(0); }
+  html[dir="rtl"] .main { margin-right: 0; }
+}
