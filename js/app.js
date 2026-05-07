@@ -78,24 +78,26 @@ function closeSidebar() {
 
 /* ─── CALCULATORS ─── */
 function calcFreedomNumber() {
-  const fields = ['housing','food','transport','utilities','insurance','debt','subs','personal','dependents'];
-  let total = 0;
-  fields.forEach(f => {
+  const essentials = ['housing','food','utilities','insurance','debt','dependents'];
+  const lifestyle  = ['transport','subs','personal'];
+  const sumFields = list => list.reduce((s, f) => {
     const v = parseFloat(document.getElementById('fn_' + f)?.value) || 0;
     saveField('fn_' + f, v);
-    total += v;
-  });
-  const survival = Math.round(total * 0.85);
-  const comfort = total;
-  const freedom = Math.round(total * 1.15);
+    return s + v;
+  }, 0);
+
+  const survival = Math.round(sumFields(essentials));
+  const comfort  = survival + Math.round(sumFields(lifestyle));
+  const freedom  = Math.round(comfort * 1.15);
+
   document.getElementById('fn_result_survival').textContent = '$' + survival.toLocaleString();
-  document.getElementById('fn_result_comfort').textContent = '$' + comfort.toLocaleString();
-  document.getElementById('fn_result_freedom').textContent = '$' + freedom.toLocaleString();
-  document.getElementById('fn_result_main').textContent = '$' + freedom.toLocaleString();
+  document.getElementById('fn_result_comfort').textContent  = '$' + comfort.toLocaleString();
+  document.getElementById('fn_result_freedom').textContent  = '$' + freedom.toLocaleString();
+  document.getElementById('fn_result_main').textContent     = '$' + freedom.toLocaleString();
 
   const fearTax = parseFloat(document.getElementById('fn_feartax')?.value) || 0;
   saveField('fn_feartax', fearTax);
-  const adjusted = freedom - fearTax;
+  const adjusted = Math.max(0, freedom - fearTax);
   document.getElementById('fn_adjusted').textContent = '$' + adjusted.toLocaleString();
 
   const sideIncome = parseFloat(document.getElementById('fn_sideincome')?.value) || 0;
